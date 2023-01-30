@@ -111,7 +111,6 @@ router.post('/getAccountsInter', (req, res) => {
                     account: "9098898978772134",
                     type: "AH",
                 },
-
             ]
         },
         message: null
