@@ -203,6 +203,21 @@ const detailsMovements = [
 ]
 router.post('/getVoucher', (req, res) => {
 	const { id } = req.body
+	if (id) {
+		const data = detailsMovements.filter(data => id === data.id)
+		res.json({
+			success: true,
+			data: { detail: data[0] },
+			message: 'Datos obtenidos correctamente!'
+		})
+	} else {
+		res.json({
+			success: false,
+			data: {},
+			message: 'Código otp incorrecto'
+		})
+	}
+
 
 })
 
