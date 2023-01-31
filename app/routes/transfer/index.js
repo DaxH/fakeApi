@@ -91,5 +91,119 @@ router.post('/addTransfer', (req, res) => {
 		})
 	}
 })
+const detailsMovements = [
+	{
+		id: 1,
+		dateOperation: '12/Nov/2022',
+		hour: '12:45',
+		nameAccount: 'Jonathan Ricardo Tillaguango Jiménez',
+		numberAccount: '212121212121',
+		idNumber: 11060708090,
+		accountType: 'Ahorro',
+		nameBeneficiary: 'Dax',
+		numberBeneficiary: '4040767687119090',
+		idNumberBeneficiary: 11070070512,
+		accountTypeBeneficiary: 'Ahorro',
+		typeTranssaction: 'C',
+		comision: 0.40,
+		value: 20,
+		concept: 'Pago de servicios',
+		referencia: 'Se realizo un pago por servicios profesionales'
+	},
+	{
+		id: 2,
+		dateOperation: '13/Nov/2022',
+		hour: '20:45',
+		nameAccount: 'Jonathan Ricardo Tillaguango Jiménez',
+		numberAccount: '212121212121',
+		idNumber: 11060708090,
+		accountType: 'Ahorro',
+		nameBeneficiary: 'Dax',
+		numberBeneficiary: '4040767687118880',
+		idNumberBeneficiary: 11070070512,
+		accountTypeBeneficiary: 'Ahorro',
+		typeTranssaction: 'D',
+		comision: 0.40,
+		value: 20,
+		concept: 'Pago de servicios',
+		referencia: 'Se realizo un pago por servicios profesionales'
+	},
+	{
+		id: 3,
+		dateOperation: '14/Nov/2022',
+		hour: '19:45',
+		nameAccount: 'Jonathan Ricardo Tillaguango Jiménez',
+		numberAccount: '212121212121',
+		idNumber: 11060708090,
+		accountType: 'Ahorro',
+		nameBeneficiary: 'Dax',
+		numberBeneficiary: '4040767687118880',
+		idNumberBeneficiary: 4040767687119090,
+		accountTypeBeneficiary: 'Ahorro',
+		typeTranssaction: 'D',
+		comision: 0.40,
+		value: 20,
+		concept: 'Pago de servicios',
+		referencia: 'Se realizo un pago por servicios profesionales'
+	},
+	{
+		id: 4,
+		dateOperation: '16/Nov/2022',
+		hour: '16:45',
+		nameAccount: 'Jonathan Ricardo Tillaguango Jiménez',
+		numberAccount: '212121212121',
+		idNumber: 11060708090,
+		accountType: 'Ahorro',
+		nameBeneficiary: 'Dax',
+		numberBeneficiary: '4040767687118880',
+		idNumberBeneficiary: 4040767687117090,
+		accountTypeBeneficiary: 'Ahorro',
+		typeTranssaction: 'C',
+		comision: 0.40,
+		value: 200,
+		concept: 'Pago de servicios',
+		referencia: 'Se realizo un pago por servicios profesionales'
+	},
+	{
+		id: 5,
+		dateOperation: '12/Nov/2022',
+		hour: '12:45',
+		nameAccount: 'Jonathan Ricardo Tillaguango Jiménez',
+		numberAccount: '212121212121',
+		idNumber: 11060708090,
+		accountType: 'Ahorro',
+		nameBeneficiary: 'Dax',
+		numberBeneficiary: '4040767687118880',
+		idNumberBeneficiary: 4040767687110090,
+		accountTypeBeneficiary: 'Ahorro',
+		typeTranssaction: ' C',
+		comision: 0.40,
+		value: 20,
+		concept: 'Anticipo',
+		referencia: 'Se realizo un pago por servicios profesionales'
+	},
+	{
+		id: 6,
+		dateOperation: '12/Nov/2022',
+		hour: '02:45',
+		nameAccount: 'Jonathan Ricardo Tillaguango Jiménez',
+		numberAccount: '212121212121',
+		idNumber: 11060708090,
+		accountType: 'Ahorro',
+		nameBeneficiary: 'Dax',
+		numberBeneficiary: '4040767687118880',
+		idNumberBeneficiary: 4040767687110090,
+		accountTypeBeneficiary: 'Ahorro',
+		typeTranssaction: 'D',
+		comision: 0.40,
+		value: 100,
+		concept: 'Pago PC',
+		referencia: 'Se realizo un pago por servicios profesionales'
+	},
+]
+router.post('/getVoucher', (req, res) => {
+	const { id } = req.body
+
+})
 
 module.exports = router
