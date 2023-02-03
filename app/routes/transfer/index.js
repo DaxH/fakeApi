@@ -104,7 +104,7 @@ const detailsMovements = [
 		numberBeneficiary: '4040767687119090',
 		idNumberBeneficiary: 11070070512,
 		accountTypeBeneficiary: 'Ahorro',
-		typeTranssaction: 'C',
+		typeTranssaction: 'D',
 		comision: 0.40,
 		value: 20,
 		concept: 'Pago de servicios',
@@ -122,8 +122,7 @@ const detailsMovements = [
 		numberBeneficiary: '4040767687118880',
 		idNumberBeneficiary: 11070070512,
 		accountTypeBeneficiary: 'Ahorro',
-		typeTranssaction: 'D',
-		comision: 0.40,
+		typeTranssaction: 'C',
 		value: 20,
 		concept: 'Pago de servicios',
 		referencia: 'Se realizo un pago por servicios profesionales'
@@ -159,8 +158,7 @@ const detailsMovements = [
 		idNumberBeneficiary: 4040767687117090,
 		accountTypeBeneficiary: 'Ahorro',
 		typeTranssaction: 'C',
-		comision: 0.40,
-		value: 200,
+		value: 20000,
 		concept: 'Pago de servicios',
 		referencia: 'Se realizo un pago por servicios profesionales'
 	},
@@ -176,8 +174,7 @@ const detailsMovements = [
 		numberBeneficiary: '4040767687118880',
 		idNumberBeneficiary: 4040767687110090,
 		accountTypeBeneficiary: 'Ahorro',
-		typeTranssaction: ' C',
-		comision: 0.40,
+		typeTranssaction: 'C',
 		value: 20,
 		concept: 'Anticipo',
 		referencia: 'Se realizo un pago por servicios profesionales'
@@ -196,7 +193,7 @@ const detailsMovements = [
 		accountTypeBeneficiary: 'Ahorro',
 		typeTranssaction: 'D',
 		comision: 0.40,
-		value: 100,
+		value: 1000,
 		concept: 'Pago PC',
 		referencia: 'Se realizo un pago por servicios profesionales'
 	},
