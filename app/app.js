@@ -6,7 +6,7 @@ const cors = require('cors')
 const port = process.env.PORT || 8080 
 
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())            
+app.use(bodyParser.json({limit: '10mb'}))            
 
 const router = require('./routes/index/index')
 
@@ -24,6 +24,7 @@ const corsOpts = {
 };
 
 app.use(cors(corsOpts))
+app.use(express.static('public'));
 app.use('/api', router)
 
 app.listen(port)

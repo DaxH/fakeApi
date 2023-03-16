@@ -212,6 +212,19 @@ const debtService = {
 			address: 'Daniel Alvarez',
 			ciBeneficiary: '1105936882'
 		},
+	],
+	1105936882001: [
+		// {
+		// 	id: 12,
+		// 	nameBeneficiary: 'Dario Xavier Gonzalez Briceño',
+		// 	amount: 15,
+		// 	codeService: 'AG8924012',
+		// 	detail: 'Agua',
+		// 	date: '20-01-2023',
+		// 	chargeService: 0,
+		// 	address: 'Daniel Alvarez',
+		// 	ciBeneficiary: '1105936882'
+		// },
 	]
 }
 
@@ -466,13 +479,36 @@ router.post('/getSavedServices', (req, res) => {
 router.post('/getDebt', (req, res) => {
 	const { codeService } = req.body
 	if (codeService) {
+		if (!debtService[codeService]) {
+			return res.json({
+				success: true,
+				data: {
+					debt: [],
+					code: 1
+				},
+				message: 'No se pudo validar el código del servicio'
+			})
+		}
+
+		if (debtService[codeService].length === 0) {
+			return res.json({
+				success: true,
+				data: {
+					debt: [],
+					code: 1
+				},
+				message: 'No hay deudas'
+			})
+		}
+
 		res.json({
 			success: true,
 			data: {
-				debt: debtService[codeService] || []
+				debt: debtService[codeService]
 			},
-			message: null
+			message: ''
 		})
+
 	} else {
 		res.json({
 			success: false,
@@ -502,7 +538,22 @@ router.post('/addServicePay', (req, res) => {
 	}
 })
 
+router.post('/addRegisterService', (req, res) => {
 
-
+	const { otp } = req.body
+	if (otp === '123456') {
+		res.json({
+			success: true,
+			data: {},
+			message: 'Registro realizado con éxito'
+		})
+	} else {
+		res.json({
+			success: false,
+			data: {},
+			message: 'Código otp incorrecto'
+		})
+	}
+})
 
 module.exports = router
