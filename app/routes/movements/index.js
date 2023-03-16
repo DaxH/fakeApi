@@ -14,7 +14,7 @@ router.post('/getMovements', (req, res) => {
                     description: 'Se realizo un pago por servicios profesionales',
                     beneficiary: "Dax",
                     account: "4040767687119090",
-                    amout: 20,
+                    amount: 20,
                     balance: 400,
                 },
                 {
@@ -26,7 +26,7 @@ router.post('/getMovements', (req, res) => {
                     description: 'Se brealizo un pago por servicios profesionales',
                     beneficiary: "Dax",
                     account: "4040767687118880",
-                    amout: 20,
+                    amount: 20,
                     balance: 420,
                 },
                 {
@@ -38,7 +38,7 @@ router.post('/getMovements', (req, res) => {
                     description: 'Se brealizo un pago por servicios profesionales',
                     beneficiary: "Dax",
                     account: "4040767687119090",
-                    amout: 20,
+                    amount: 20,
                     balance: 400,
                 },
                 {
@@ -50,7 +50,7 @@ router.post('/getMovements', (req, res) => {
                     description: 'Se brealizo un pago por servicios profesionales',
                     beneficiary: "Dax",
                     account: "4040767687117090",
-                    amout: 200,
+                    amount: 20000,
                     balance: 600,
                 },
                 {
@@ -62,7 +62,7 @@ router.post('/getMovements', (req, res) => {
                     description: 'Se brealizo un pago por servicios profesionales',
                     beneficiary: "Dax",
                     account: "4040767687114090",
-                    amout: 100,
+                    amount: 100,
                     balance: 500,
                 },
                 {
@@ -74,7 +74,7 @@ router.post('/getMovements', (req, res) => {
                     description: 'Se brealizo un pago por servicios profesionales',
                     beneficiary: "Dax",
                     account: "4040767687110090",
-                    amout: 20,
+                    amount: 20,
                     balance: 520,
                 }
             ]
