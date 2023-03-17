@@ -158,6 +158,243 @@ const avatar = {
 	maxSize: 3.1
 }
 
+router.post('/getEntity', (req, res) => {
+	return res.json({
+		success: true,
+		data: {
+			entity: {
+				titlePage: "Tikee",
+				nameIfi: "Tikee ",
+				logoHorizontal: "https://fintech.kradac.com:3007/imagespublic/logos/tikee-h-color.png",
+				logoVertical: "https://fintech.kradac.com:3007/imagespublic/logos/tikee-v-logo.png",
+				favicon: "https://fintech.kradac.com:3007/imagespublic/logos/tikee-v-logo.ico",
+				colorPrimary: "#576BEF",
+				colorSecondary: "#35C8F5",
+				copyright: "Tikee  Ecuador 2022. Todos los Derechos reservados  Edit.",
+				contact: "0962105773",
+				email: "info@fintech.com",
+				slogan: "lema de los mejores  Edit",
+				facebook: "facebook  Edit",
+				twitter: "twitter  Edit",
+				customerSupport: 1,
+				timeOtp: 3,
+				numberAttempts: 3,
+				template: 0
+			}
+		},
+		message: ''
+	})
+})
+
+router.post('/login', (req, res) => {
+	const { username, password } = req.body
+	if (username === 'tikee' && password === 'tikee') {
+		res.json({
+			success: true,
+			data: {
+				admin: {
+					idAdmin: 45,
+					user: "tikee",
+					nameAdmin: "Dario",
+					lastNameAdmin: "Gonzalez",
+					idEntity: 62,
+					token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzkwMjcyNTgsImV4cCI6MTY3OTAzMDg1OH0.7XofGljT8cfEPx3h20Zsb8Vtu6vvOQsTTtTo_oQJ31E"
+				}
+			},
+			message: ''
+		})
+	} else {
+		res.json({
+			success: true,
+			data: {
+				admin: {
+				}
+			},
+			message: 'Credenciales incorrectas'
+		})
+	}
+})
+
+router.post('/getMenu', (req, res) => {
+	res.json({
+		success: true,
+		data: {
+			menu: [
+				{
+					id_menu: 2,
+					id_menu_banca: 46,
+					orden: 1,
+					nivel: 1,
+					padre: 0,
+					nombre: "Inicio",
+					navegacion: "/posicion-consolidada",
+					estado: 1,
+					version: 0,
+					animacion: null,
+					tipo_usuario: 0,
+					fecha_creacion: "2022-12-13T22:24:29.000Z",
+					fecha_actualizacion: "2023-01-18T17:11:23.000Z",
+					icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK",
+					hijos: []
+				},
+				{
+					id_menu: 1,
+					id_menu_banca: 46,
+					orden: 2,
+					nivel: 1,
+					padre: 0,
+					nombre: "Transferencias",
+					navegacion: "/#",
+					estado: 1,
+					version: 0,
+					animacion: null,
+					tipo_usuario: 0,
+					fecha_creacion: "2022-12-13T22:24:29.000Z",
+					fecha_actualizacion: "2023-01-18T17:11:35.000Z",
+					icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK",
+					hijos: [
+						{
+							id_menu: 3,
+							id_menu_banca: 46,
+							orden: 1,
+							nivel: 2,
+							padre: 1,
+							nombre: "Internas",
+							navegacion: "/transferencias/internas",
+							estado: 1,
+							version: 0,
+							animacion: null,
+							tipo_usuario: 0,
+							fecha_creacion: "2022-12-13T22:24:29.000Z",
+							fecha_actualizacion: "2023-01-18T17:11:35.000Z",
+							icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK"
+						},
+						{
+							id_menu: 4,
+							id_menu_banca: 46,
+							orden: 2,
+							nivel: 2,
+							padre: 1,
+							nombre: "Interbancarias",
+							navegacion: "/transferencias/interbancarias",
+							estado: 1,
+							version: 0,
+							animacion: null,
+							tipo_usuario: 0,
+							fecha_creacion: "2022-12-13T22:24:29.000Z",
+							fecha_actualizacion: "2023-01-18T17:11:42.000Z",
+							icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK"
+						}
+					]
+				},
+				{
+					id_menu: 5,
+					id_menu_banca: 46,
+					orden: 3,
+					nivel: 1,
+					padre: 0,
+					nombre: "Pago de servicios",
+					navegacion: "/pagos-servicios",
+					estado: 1,
+					version: 0,
+					animacion: null,
+					tipo_usuario: 0,
+					fecha_creacion: "2022-12-13T22:24:29.000Z",
+					fecha_actualizacion: "2023-01-18T17:11:48.000Z",
+					icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK",
+					hijos: []
+				},
+				{
+					id_menu: 8,
+					id_menu_banca: 46,
+					orden: 4,
+					nivel: 1,
+					padre: 0,
+					nombre: "Pago de tarjetas",
+					navegacion: "/tarjetas/pagos",
+					estado: 1,
+					version: 0,
+					animacion: null,
+					tipo_usuario: 0,
+					fecha_creacion: "2022-12-13T22:24:29.000Z",
+					fecha_actualizacion: "2023-03-15T15:35:06.000Z",
+					icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK",
+					hijos: []
+				},
+				{
+					id_menu: 9,
+					id_menu_banca: 46,
+					orden: 5,
+					nivel: 1,
+					padre: 0,
+					nombre: "Otros servicios",
+					navegacion: "/otros-servicios",
+					estado: 1,
+					version: 0,
+					animacion: null,
+					tipo_usuario: 0,
+					fecha_creacion: "2022-12-13T22:24:29.000Z",
+					fecha_actualizacion: "2023-01-18T17:11:57.000Z",
+					icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK",
+					hijos: []
+				},
+				{
+					id_menu: 10,
+					id_menu_banca: 46,
+					orden: 6,
+					nivel: 1,
+					padre: 0,
+					nombre: "Cuentas",
+					navegacion: "/cuentas",
+					estado: 1,
+					version: 0,
+					animacion: null,
+					tipo_usuario: 0,
+					fecha_creacion: "2022-12-13T22:24:29.000Z",
+					fecha_actualizacion: "2023-01-18T17:12:03.000Z",
+					icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK",
+					hijos: []
+				},
+				{
+					id_menu: 11,
+					id_menu_banca: 46,
+					orden: 7,
+					nivel: 1,
+					padre: 0,
+					nombre: "Mis contactos",
+					navegacion: "/mis-contactos",
+					estado: 1,
+					version: 0,
+					animacion: null,
+					tipo_usuario: 0,
+					fecha_creacion: "2022-12-13T22:24:29.000Z",
+					fecha_actualizacion: "2023-01-18T17:12:07.000Z",
+					icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK",
+					hijos: []
+				},
+				{
+					id_menu: 12,
+					id_menu_banca: 46,
+					orden: 8,
+					nivel: 1,
+					padre: 0,
+					nombre: "Ayuda",
+					navegacion: "/ayuda",
+					estado: 1,
+					version: 0,
+					animacion: null,
+					tipo_usuario: 0,
+					fecha_creacion: "2022-12-13T22:24:29.000Z",
+					fecha_actualizacion: "2023-01-18T17:12:10.000Z",
+					icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK",
+					hijos: []
+				}
+			]
+		},
+		message: ''
+	})
+})
+
 router.post('/validateRegisterBeneficiary', (req, res) => {
 
 	const {
@@ -632,7 +869,6 @@ router.post('/changeImage/addImage', (req, res) => {
 })
 
 router.post('/changePassword/getInitialData', (req, res) => {
-	console.log('==========passwordRegex==========>', passwordRegex)
 	res.json({
 		data: {
 			passwordRegex
