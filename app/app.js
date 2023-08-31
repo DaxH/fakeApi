@@ -1,12 +1,12 @@
-const express = require('express') 
-const app = express()       
-const bodyParser = require('body-parser')        
+const express = require('express')
+const app = express()
+const bodyParser = require('body-parser')
 const cors = require('cors')
 
-const port = process.env.PORT || 8080 
+const port = process.env.PORT || 8080
 
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json({limit: '10mb'}))            
+app.use(bodyParser.json({ limit: '10mb' }))
 
 const router = require('./routes/index/index')
 
@@ -20,6 +20,9 @@ const corsOpts = {
 
 	allowedHeaders: [
 		'Content-Type',
+		'Accept',
+		'Authorization',
+		'estado'
 	],
 };
 

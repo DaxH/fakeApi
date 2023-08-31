@@ -179,7 +179,7 @@ router.post('/getEntity', (req, res) => {
 				customerSupport: 1,
 				timeOtp: 3,
 				numberAttempts: 3,
-				template: 0
+				template: 1
 			}
 		},
 		message: ''
@@ -234,7 +234,7 @@ router.post('/getMenu', (req, res) => {
 					tipo_usuario: 0,
 					fecha_creacion: "2022-12-13T22:24:29.000Z",
 					fecha_actualizacion: "2023-01-18T17:11:23.000Z",
-					icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK",
+					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fhome.svg?alt=media&token=bdd5ffca-dcd4-4b83-bace-f4f60efbf267",
 					hijos: []
 				},
 				{
@@ -251,7 +251,7 @@ router.post('/getMenu', (req, res) => {
 					tipo_usuario: 0,
 					fecha_creacion: "2022-12-13T22:24:29.000Z",
 					fecha_actualizacion: "2023-01-18T17:11:35.000Z",
-					icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK",
+					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Ftransfer.svg?alt=media&token=a476f804-acb4-4113-b429-ba9f16451686",
 					hijos: [
 						{
 							id_menu: 3,
@@ -267,7 +267,7 @@ router.post('/getMenu', (req, res) => {
 							tipo_usuario: 0,
 							fecha_creacion: "2022-12-13T22:24:29.000Z",
 							fecha_actualizacion: "2023-01-18T17:11:35.000Z",
-							icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK"
+							icono: ""
 						},
 						{
 							id_menu: 4,
@@ -283,7 +283,7 @@ router.post('/getMenu', (req, res) => {
 							tipo_usuario: 0,
 							fecha_creacion: "2022-12-13T22:24:29.000Z",
 							fecha_actualizacion: "2023-01-18T17:11:42.000Z",
-							icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK"
+							icono: ""
 						}
 					]
 				},
@@ -301,7 +301,7 @@ router.post('/getMenu', (req, res) => {
 					tipo_usuario: 0,
 					fecha_creacion: "2022-12-13T22:24:29.000Z",
 					fecha_actualizacion: "2023-01-18T17:11:48.000Z",
-					icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK",
+					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fpay-svgrepo-com.svg?alt=media&token=18765db9-e546-452e-8e8d-cfa03b5e46c6",
 					hijos: []
 				},
 				{
@@ -318,7 +318,7 @@ router.post('/getMenu', (req, res) => {
 					tipo_usuario: 0,
 					fecha_creacion: "2022-12-13T22:24:29.000Z",
 					fecha_actualizacion: "2023-03-15T15:35:06.000Z",
-					icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK",
+					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fcards.svg?alt=media&token=860e92da-1e94-4ba5-a574-e920c0b3f9cb",
 					hijos: []
 				},
 				{
@@ -335,7 +335,7 @@ router.post('/getMenu', (req, res) => {
 					tipo_usuario: 0,
 					fecha_creacion: "2022-12-13T22:24:29.000Z",
 					fecha_actualizacion: "2023-01-18T17:11:57.000Z",
-					icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK",
+					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fservice.svg?alt=media&token=50d40c66-9178-4cbd-b456-15c145e3acf2",
 					hijos: []
 				},
 				{
@@ -352,7 +352,7 @@ router.post('/getMenu', (req, res) => {
 					tipo_usuario: 0,
 					fecha_creacion: "2022-12-13T22:24:29.000Z",
 					fecha_actualizacion: "2023-01-18T17:12:03.000Z",
-					icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK",
+					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Faccounts.svg?alt=media&token=ca67a2e0-574b-4a1a-b558-6c3ba014bcbd",
 					hijos: []
 				},
 				{
@@ -369,7 +369,7 @@ router.post('/getMenu', (req, res) => {
 					tipo_usuario: 0,
 					fecha_creacion: "2022-12-13T22:24:29.000Z",
 					fecha_actualizacion: "2023-01-18T17:12:07.000Z",
-					icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK",
+					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fcontacts.svg?alt=media&token=715380bb-93ef-4623-a220-75fb81c2bac6",
 					hijos: []
 				},
 				{
@@ -386,7 +386,7 @@ router.post('/getMenu', (req, res) => {
 					tipo_usuario: 0,
 					fecha_creacion: "2022-12-13T22:24:29.000Z",
 					fecha_actualizacion: "2023-01-18T17:12:10.000Z",
-					icono: "data:image/x-icon;base64,AAABAAQAEBAAAAEAIADjAQAARgAAABgYAAABACAADAMAACkCAAAgIAAAAQAgADkDAAA1BQAAQEAAAAEAIACwBgAAbggAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgDAAAAKC0PUwAAAORQTFRFIiIiIiIiIiIiIiIiIiIiIiIiMlBYPXKAKTc7Kjo+SJCkLUJHRYiaOGRvNVhiNltlS5muS5qvMU1VOWdzM1NcSZOnOmd0JzAzQHuLVrnUVLTPQX2NVrvWQHmJNlxmSJK",
+					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fhelp.svg?alt=media&token=75887992-e255-4fbd-ac0a-ecba690bbf3f",
 					hijos: []
 				}
 			]
