@@ -301,7 +301,7 @@ router.post('/getMenu', (req, res) => {
 					tipo_usuario: 0,
 					fecha_creacion: "2022-12-13T22:24:29.000Z",
 					fecha_actualizacion: "2023-01-18T17:11:48.000Z",
-					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fpay-svgrepo-com.svg?alt=media&token=18765db9-e546-452e-8e8d-cfa03b5e46c6",
+					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fpay-svgrepo-com.svg?alt=media&token=1a37d282-396c-4a16-ae35-a71b6133a0cf",
 					hijos: []
 				},
 				{
@@ -318,7 +318,7 @@ router.post('/getMenu', (req, res) => {
 					tipo_usuario: 0,
 					fecha_creacion: "2022-12-13T22:24:29.000Z",
 					fecha_actualizacion: "2023-03-15T15:35:06.000Z",
-					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fcards.svg?alt=media&token=860e92da-1e94-4ba5-a574-e920c0b3f9cb",
+					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fcards.svg?alt=media&token=aea9b570-a73a-4d16-b204-80825b41cf12",
 					hijos: []
 				},
 				{
@@ -369,7 +369,7 @@ router.post('/getMenu', (req, res) => {
 					tipo_usuario: 0,
 					fecha_creacion: "2022-12-13T22:24:29.000Z",
 					fecha_actualizacion: "2023-01-18T17:12:07.000Z",
-					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fcontacts.svg?alt=media&token=715380bb-93ef-4623-a220-75fb81c2bac6",
+					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fcontacts.svg?alt=media&token=7cd35afd-ef8e-4a77-9234-7cba94389bd7",
 					hijos: []
 				},
 				{
