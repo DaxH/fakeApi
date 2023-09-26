@@ -164,7 +164,7 @@ const debtService = {
 	11: [
 		{
 			id: 9,
-			nameBeneficiary: 'Dax',
+			nameBeneficiary: 'Juan Pablo',
 			amount: 100,
 			codeService: 'AL8124112',
 			detail: 'Ateneo Loja',
@@ -177,7 +177,7 @@ const debtService = {
 	12: [
 		{
 			id: 10,
-			nameBeneficiary: 'Dax',
+			nameBeneficiary: 'Juan Pablo',
 			amount: 120,
 			codeService: 'CR242221',
 			detail: 'Crecer',
@@ -190,7 +190,7 @@ const debtService = {
 	13: [
 		{
 			id: 11,
-			nameBeneficiary: 'Dax',
+			nameBeneficiary: 'Juan Pablo',
 			amount: 115,
 			codeService: 'EE1787876',
 			detail: 'Escuela Eugenio',

@@ -117,28 +117,28 @@ router.post('/getMyAccounts', (req, res) => {
 			accounts: [
 				{
 					id: 1,
-					beneficiary: "Dax",
+					beneficiary: "Patricia Saraguro",
 					account: "4040767687",
 					balance: 400,
 					type: "AH",
 				},
 				{
 					id: 2,
-					beneficiary: "Dax",
+					beneficiary: "Patricia Saraguro",
 					account: "4141872182",
 					balance: 100,
 					type: "AH",
 				},
 				{
 					id: 3,
-					beneficiary: "Dax",
+					beneficiary: "Patricia Saraguro",
 					account: "2904898935",
 					balance: 20000,
 					type: "AH",
 				},
 				{
 					id: 4,
-					beneficiary: "Dax",
+					beneficiary: "Patricia Saraguro",
 					account: "9098898978",
 					balance: 0,
 					type: "AH",

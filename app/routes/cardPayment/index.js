@@ -10,7 +10,7 @@ router.post('/getAccountsCard', (req, res) => {
 				{
 					id: 1,
 					beneficiary: 'Xavier',
-					number: '4005580000000040',
+					numero: '4005580000000040',
 					email: 'xavier@gmail.com',
 					ci: '9098822121',
 					alias: 'mia',
@@ -24,7 +24,7 @@ router.post('/getAccountsCard', (req, res) => {
 				{
 					id: 2,
 					beneficiary: 'Julio',
-					number: '370000000000002',
+					numero: '370000000000002',
 					email: 'julio@gmail.com',
 					ci: '8878121212',
 					alias: 'JULIO',
@@ -38,7 +38,7 @@ router.post('/getAccountsCard', (req, res) => {
 				{
 					id: 3,
 					beneficiary: 'Paula',
-					number: '36018623456787',
+					numero: '36018623456787',
 					email: 'paula@gmail.com',
 					ci: '8912397894',
 					alias: 'PAULA',
@@ -52,7 +52,7 @@ router.post('/getAccountsCard', (req, res) => {
 				{
 					id: 4,
 					beneficiary: 'Tomás',
-					number: '6440072748131186',
+					numero: '6440072748131186',
 					email: 'tomas@gmail.com',
 					ci: '7655551212',
 					alias: 'TOMAS',
@@ -66,7 +66,7 @@ router.post('/getAccountsCard', (req, res) => {
 				{
 					id: 5,
 					beneficiary: 'Daniela',
-					number: '5424000000000015',
+					numero: '5424000000000015',
 					email: 'daniela@gmail.com',
 					ci: '7655551212',
 					alias: 'DANIELA',
