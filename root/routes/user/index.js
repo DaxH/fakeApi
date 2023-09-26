@@ -559,7 +559,7 @@ router.post('/registerBeneficiary', (req, res) => {
 
 	switch (typeBeneficiary) {
 		case 'INTERNAL':
-			if (otp === '123456') {
+			if (otp === '151617') {
 				if (ciBeneficiary && nameBeneficiary && numberAccount && typeAccount) {
 					res.json({
 						success: true,
@@ -583,7 +583,7 @@ router.post('/registerBeneficiary', (req, res) => {
 			break;
 		case 'INTERBANK':
 		case 'CARD':
-			if (otp === '123456') {
+			if (otp === '151617') {
 				if (ciBeneficiary && nameBeneficiary && numberCard && aliasCard, typeCard) {
 					res.json({
 						success: true,
@@ -631,7 +631,7 @@ router.post('/updateBeneficiary', (req, res) => {
 
 	switch (typeBeneficiary) {
 		case 'INTERNAL':
-			if (otp === '123456') {
+			if (otp === '151617') {
 				if (ciBeneficiary && nameBeneficiary && numberAccount && typeAccount) {
 					res.json({
 						success: true,
@@ -654,7 +654,7 @@ router.post('/updateBeneficiary', (req, res) => {
 			}
 			break;
 		case 'INTERBANK':
-			if (otp === '123456') {
+			if (otp === '151617') {
 				if (ciBeneficiary && nameBeneficiary && numberAccount && typeAccount) {
 					res.json({
 						success: true,
@@ -677,7 +677,7 @@ router.post('/updateBeneficiary', (req, res) => {
 			}
 			break;
 		case 'CARD':
-			if (otp === '123456') {
+			if (otp === '151617') {
 				if (ciBeneficiary && nameBeneficiary && numberCard && aliasCard, typeCard) {
 					res.json({
 						success: true,
@@ -794,7 +794,7 @@ router.post('/changeQuestion/addQuestion', (req, res) => {
 
 	const { otp, questions } = req.body
 
-	if (otp === '123456') {
+	if (otp === '151617') {
 		if (questions.length > 2) {
 			res.json({
 				success: true,
@@ -844,7 +844,7 @@ router.post('/changeImage/addImage', (req, res) => {
 
 	const { otp, idImage } = req.body
 
-	if (otp === '123456') {
+	if (otp === '151617') {
 		if (idImage) {
 			res.json({
 				success: true,
@@ -909,7 +909,7 @@ router.post('/changePassword/addPassword', (req, res) => {
 
 	const { otp, newPassword } = req.body
 
-	if (otp === '123456') {
+	if (otp === '151617') {
 		if (newPassword) {
 			res.json({
 				success: true,

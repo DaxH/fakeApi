@@ -254,7 +254,7 @@ router.post('/validateTransfer', (req, res) => {
 router.post('/addTransfer', (req, res) => {
 
 	const { otp } = req.body
-	if (otp === '123456') {
+	if (otp === '151617') {
 		res.json({
 			success: true,
 			data: {

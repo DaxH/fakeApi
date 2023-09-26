@@ -97,7 +97,7 @@ router.post('/validatePay', (req, res) => {
 router.post('/addPay', (req, res) => {
 
 	const { otp } = req.body
-	if (otp === '123456') {
+	if (otp === '151617') {
 		res.json({
 			success: true,
 			data: {

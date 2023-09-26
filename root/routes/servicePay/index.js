@@ -523,7 +523,7 @@ router.post('/getDebt', (req, res) => {
 router.post('/addServicePay', (req, res) => {
 
 	const { otp } = req.body
-	if (otp === '123456') {
+	if (otp === '151617') {
 		res.json({
 			success: true,
 			data: {},
@@ -541,7 +541,7 @@ router.post('/addServicePay', (req, res) => {
 router.post('/addRegisterService', (req, res) => {
 
 	const { otp } = req.body
-	if (otp === '123456') {
+	if (otp === '151617') {
 		res.json({
 			success: true,
 			data: {},

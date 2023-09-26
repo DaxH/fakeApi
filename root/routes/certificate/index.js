@@ -63,7 +63,7 @@ router.post('/addCertificate', async (req, res) => {
 	
 	const { otp } = req.body
 
-	if (otp === '123456') {
+	if (otp === '151617') {
 
 		const filePath = path.join(__dirname, '../../public/certificate/certificate/certificate.pdf');
 		const base64File = await getFile({ path: filePath })
