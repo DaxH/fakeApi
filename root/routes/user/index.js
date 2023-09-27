@@ -287,23 +287,23 @@ router.post('/getMenu', (req, res) => {
 						}
 					]
 				},
-				{
-					id_menu: 5,
-					id_menu_banca: 46,
-					orden: 3,
-					nivel: 1,
-					padre: 0,
-					nombre: "Pago de servicios",
-					navegacion: "/pagos-servicios",
-					estado: 1,
-					version: 0,
-					animacion: null,
-					tipo_usuario: 0,
-					fecha_creacion: "2022-12-13T22:24:29.000Z",
-					fecha_actualizacion: "2023-01-18T17:11:48.000Z",
-					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fpay-svgrepo-com.svg?alt=media&token=1a37d282-396c-4a16-ae35-a71b6133a0cf",
-					hijos: []
-				},
+				// {
+				// 	id_menu: 5,
+				// 	id_menu_banca: 46,
+				// 	orden: 3,
+				// 	nivel: 1,
+				// 	padre: 0,
+				// 	nombre: "Pago de servicios",
+				// 	navegacion: "/pagos-servicios",
+				// 	estado: 1,
+				// 	version: 0,
+				// 	animacion: null,
+				// 	tipo_usuario: 0,
+				// 	fecha_creacion: "2022-12-13T22:24:29.000Z",
+				// 	fecha_actualizacion: "2023-01-18T17:11:48.000Z",
+				// 	icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fpay-svgrepo-com.svg?alt=media&token=1a37d282-396c-4a16-ae35-a71b6133a0cf",
+				// 	hijos: []
+				// },
 				{
 					id_menu: 8,
 					id_menu_banca: 46,
