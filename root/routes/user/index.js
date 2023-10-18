@@ -372,23 +372,23 @@ router.post('/getMenu', (req, res) => {
 				// 	icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fcontacts.svg?alt=media&token=7cd35afd-ef8e-4a77-9234-7cba94389bd7",
 				// 	hijos: []
 				// },
-				{
-					id_menu: 12,
-					id_menu_banca: 46,
-					orden: 8,
-					nivel: 1,
-					padre: 0,
-					nombre: "Ayuda",
-					navegacion: "/#",
-					estado: 1,
-					version: 0,
-					animacion: null,
-					tipo_usuario: 0,
-					fecha_creacion: "2022-12-13T22:24:29.000Z",
-					fecha_actualizacion: "2023-01-18T17:12:10.000Z",
-					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fhelp.svg?alt=media&token=75887992-e255-4fbd-ac0a-ecba690bbf3f",
-					hijos: []
-				}
+				// {
+				// 	id_menu: 12,
+				// 	id_menu_banca: 46,
+				// 	orden: 8,
+				// 	nivel: 1,
+				// 	padre: 0,
+				// 	nombre: "Ayuda",
+				// 	navegacion: "/#",
+				// 	estado: 1,
+				// 	version: 0,
+				// 	animacion: null,
+				// 	tipo_usuario: 0,
+				// 	fecha_creacion: "2022-12-13T22:24:29.000Z",
+				// 	fecha_actualizacion: "2023-01-18T17:12:10.000Z",
+				// 	icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fhelp.svg?alt=media&token=75887992-e255-4fbd-ac0a-ecba690bbf3f",
+				// 	hijos: []
+				// }
 			]
 		},
 		message: ''
