@@ -3,7 +3,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
-const port = process.env.PORT || 7070
+const port = process.env.PORT || 8000
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json({ limit: '10mb' }))
@@ -11,6 +11,7 @@ app.use(bodyParser.json({ limit: '10mb' }))
 const router = require('./routes/index/index')
 
 const corsOpts = {
+
 	origin: '*',
 
 	methods: [
@@ -22,7 +23,9 @@ const corsOpts = {
 		'Content-Type',
 		'Accept',
 		'Authorization',
-		'estado'
+		'estado',
+		'id',
+		'uid'
 	],
 };
 
