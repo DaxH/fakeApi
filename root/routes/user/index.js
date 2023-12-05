@@ -238,6 +238,23 @@ router.post('/getMenu', (req, res) => {
 					hijos: []
 				},
 				{
+					id_menu: 3,
+					id_menu_banca: 46,
+					orden: 3,
+					nivel: 1,
+					padre: 0,
+					nombre: "Créditos",
+					navegacion: "/creditos",
+					estado: 1,
+					version: 0,
+					animacion: null,
+					tipo_usuario: 0,
+					fecha_creacion: "2022-12-13T22:24:29.000Z",
+					fecha_actualizacion: "2023-01-18T17:11:23.000Z",
+					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fcredit.svg?alt=media&token=40fb7f76-f7a2-41b4-8e66-d1db39982daf",
+					hijos: []
+				},
+				{
 					id_menu: 1,
 					id_menu_banca: 46,
 					orden: 2,
@@ -287,23 +304,6 @@ router.post('/getMenu', (req, res) => {
 						}
 					]
 				},
-				// {
-				// 	id_menu: 5,
-				// 	id_menu_banca: 46,
-				// 	orden: 3,
-				// 	nivel: 1,
-				// 	padre: 0,
-				// 	nombre: "Pago de servicios",
-				// 	navegacion: "/pagos-servicios",
-				// 	estado: 1,
-				// 	version: 0,
-				// 	animacion: null,
-				// 	tipo_usuario: 0,
-				// 	fecha_creacion: "2022-12-13T22:24:29.000Z",
-				// 	fecha_actualizacion: "2023-01-18T17:11:48.000Z",
-				// 	icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fpay-svgrepo-com.svg?alt=media&token=1a37d282-396c-4a16-ae35-a71b6133a0cf",
-				// 	hijos: []
-				// },
 				{
 					id_menu: 8,
 					id_menu_banca: 46,
@@ -321,23 +321,6 @@ router.post('/getMenu', (req, res) => {
 					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fcards.svg?alt=media&token=aea9b570-a73a-4d16-b204-80825b41cf12",
 					hijos: []
 				},
-				// {
-				// 	id_menu: 9,
-				// 	id_menu_banca: 46,
-				// 	orden: 5,
-				// 	nivel: 1,
-				// 	padre: 0,
-				// 	nombre: "Otros servicios",
-				// 	navegacion: "/otros-servicios",
-				// 	estado: 1,
-				// 	version: 0,
-				// 	animacion: null,
-				// 	tipo_usuario: 0,
-				// 	fecha_creacion: "2022-12-13T22:24:29.000Z",
-				// 	fecha_actualizacion: "2023-01-18T17:11:57.000Z",
-				// 	icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fservice.svg?alt=media&token=50d40c66-9178-4cbd-b456-15c145e3acf2",
-				// 	hijos: []
-				// },
 				{
 					id_menu: 10,
 					id_menu_banca: 46,
@@ -355,40 +338,6 @@ router.post('/getMenu', (req, res) => {
 					icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Faccounts.svg?alt=media&token=ca67a2e0-574b-4a1a-b558-6c3ba014bcbd",
 					hijos: []
 				},
-				// {
-				// 	id_menu: 11,
-				// 	id_menu_banca: 46,
-				// 	orden: 7,
-				// 	nivel: 1,
-				// 	padre: 0,
-				// 	nombre: "Mis contactos",
-				// 	navegacion: "/mis-contactos",
-				// 	estado: 1,
-				// 	version: 0,
-				// 	animacion: null,
-				// 	tipo_usuario: 0,
-				// 	fecha_creacion: "2022-12-13T22:24:29.000Z",
-				// 	fecha_actualizacion: "2023-01-18T17:12:07.000Z",
-				// 	icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fcontacts.svg?alt=media&token=7cd35afd-ef8e-4a77-9234-7cba94389bd7",
-				// 	hijos: []
-				// },
-				// {
-				// 	id_menu: 12,
-				// 	id_menu_banca: 46,
-				// 	orden: 8,
-				// 	nivel: 1,
-				// 	padre: 0,
-				// 	nombre: "Ayuda",
-				// 	navegacion: "/#",
-				// 	estado: 1,
-				// 	version: 0,
-				// 	animacion: null,
-				// 	tipo_usuario: 0,
-				// 	fecha_creacion: "2022-12-13T22:24:29.000Z",
-				// 	fecha_actualizacion: "2023-01-18T17:12:10.000Z",
-				// 	icono: "https://firebasestorage.googleapis.com/v0/b/tikee-admin-map.appspot.com/o/menu%2Fhelp.svg?alt=media&token=75887992-e255-4fbd-ac0a-ecba690bbf3f",
-				// 	hijos: []
-				// }
 			]
 		},
 		message: ''
