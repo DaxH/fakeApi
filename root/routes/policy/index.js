@@ -17,10 +17,10 @@ const interestPayments = [
 		id: 1,
 		description: 'AL VENCIMIENTO'
 	},
-	// {
-	// 	id: 2,
-	// 	description: 'MENSUAL'
-	// }
+	{
+		id: 2,
+		description: 'MENSUAL'
+	}
 ]
 
 router.post('/getInitialData', (req, res) => {

@@ -3,7 +3,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
-const port = process.env.PORT || 7070
+const port = process.env.PORT || 4000
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json({ limit: '10mb' }))
@@ -19,14 +19,7 @@ const corsOpts = {
 		'POST',
 	],
 
-	allowedHeaders: [
-		'Content-Type',
-		'Accept',
-		'Authorization',
-		'estado',
-		'id',
-		'uid'
-	],
+	allowedHeaders: ['*'],
 };
 
 app.use(cors(corsOpts))
@@ -34,4 +27,4 @@ app.use(express.static('public'));
 app.use('/api', router)
 
 app.listen(port)
-console.log('API escuchando en el puerto ' + port)
+// console.log('API escuchando en el puerto ' + port)

@@ -22,8 +22,7 @@ router.post('/getInitialData', (req, res) => {
 })
 router.post('/simulate', (req, res) => {
 
-	const { amount: amountBody, term: termBody, dayDebit: dayDebitBody } = req.body
-
+	const { amount: amountBody, term: termBody, dayDebit: dayDebitBody, option } = req.body
 	const dayNow = moment().format('DD')
 	const dayDebit = Number(dayNow) < Number(dayDebitBody) ? moment() : moment().add(1, 'month')
 	const dateDebit = dayDebit.set('date', dayDebitBody)
@@ -45,15 +44,51 @@ router.post('/simulate', (req, res) => {
 	let interestMont = 0
 	let nextDateDebit = nexDebit
 
-	for (let i = 0; i < term; i++) {
+	if (option === 'monthlySaving') {
+		for (let i = 0; i < term; i++) {
 
-		accumulatedSavings = amount + totalSaving
+			accumulatedSavings = amount + totalSaving
+
+			interestMont = accumulatedSavings * TEM
+
+			totalInterest += interestMont
+
+			totalSaving += amount + interestMont
+
+			nextDateDebit = nextDateDebit.add(1, 'month')
+
+			detailPayment.push({
+				period: i + 1,
+				interest: TEA,
+				nextDateDebit: nextDateDebit.format('YYYY-MM-DD'),
+				accumulatedSavings: accumulatedSavings.toFixed(2),
+				interestMont: interestMont.toFixed(2),
+				totalSaving: totalSaving.toFixed(2)
+			})
+		}
+		return res.json({
+			success: true,
+			data: {
+				tea: TEA.toFixed(2),
+				detailPayment,
+				dateDebit: dateDebit.format('YYYY-MM-DD'),
+				totalSaving: totalSaving.toFixed(2),
+				totalInterest: totalInterest.toFixed(2)
+			},
+			message: ''
+		})
+	}
+
+	const amountMont = amount / term
+
+	for (let i = 0; i < term; i++) {
+		accumulatedSavings = amountMont + totalSaving
 
 		interestMont = accumulatedSavings * TEM
 
 		totalInterest += interestMont
 
-		totalSaving += amount + interestMont
+		totalSaving += amountMont + interestMont
 
 		nextDateDebit = nextDateDebit.add(1, 'month')
 
