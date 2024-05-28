@@ -10,6 +10,7 @@ const policy = require('../policy/index')
 const credit = require('../credit/index')
 const savingsPurpose = require('../savingsPurpose/index')
 const certificate = require('../certificate/index')
+const consolidated = require('../consolidated/index')
 
 router.use('/otp', otp)
 router.use('/catalog', catalog)
@@ -22,6 +23,7 @@ router.use('/policy', policy)
 router.use('/credit', credit)
 router.use('/savingsPurpose', savingsPurpose)
 router.use('/certificate', certificate)
+router.use('/consolidated', consolidated)
 
 router.get('/', function (req, res) {
 	res.status(200).json({ message: 'Estás conectado a nuestra API' })
