@@ -6,7 +6,7 @@ const getFile = require('../../utils/functions')
 router.post('/getInitialData', (req, res) => {
 
 	res.json({
-		success: true,
+		success: 'COD_OK',
 		data: {
 			amount: {
 				minAmount: 20,
@@ -67,7 +67,7 @@ router.post('/simulate', (req, res) => {
 			})
 		}
 		return res.json({
-			success: true,
+			success: 'COD_OK',
 			data: {
 				tea: TEA.toFixed(2),
 				detailPayment,
@@ -104,7 +104,7 @@ router.post('/simulate', (req, res) => {
 
 
 	res.json({
-		success: true,
+		success: 'COD_OK',
 		data: {
 			tea: TEA.toFixed(2),
 			detailPayment,
@@ -123,7 +123,7 @@ router.post('/getContract', async (req, res) => {
 	const base64File = await getFile({ path: filePath })
 
 	res.json({
-		success: true,
+		success: 'COD_OK',
 		data: {
 			contract: base64File
 		},
@@ -135,21 +135,20 @@ router.post('/getContract', async (req, res) => {
 router.post('/addSaving', async (req, res) => {
 
 	const { otp } = req.body
-	if (otp === '151617') {
-		res.json({
-			success: true,
-			data: {
-				nDocument: '9867671'
-			},
-			message: ''
-		})
-	} else {
-		res.json({
-			success: false,
+
+	if (!otp) {
+		return res.json({
+			success: 'COD_ERR',
 			data: {},
-			message: 'Código OTP incorrecto'
+			message: 'Código OTP no existe'
 		})
 	}
+
+	res.json({
+		success: 'COD_OK',
+		data: {},
+		message: ''
+	})
 })
 
 

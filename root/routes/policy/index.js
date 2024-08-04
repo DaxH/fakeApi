@@ -26,7 +26,7 @@ const interestPayments = [
 router.post('/getInitialData', (req, res) => {
 
 	res.json({
-		success: true,
+		success: 'COD_OK',
 		data: {
 			amount: {
 				minAmount: 200,
@@ -50,7 +50,7 @@ router.post('/simulate', (req, res) => {
 		let annualInterest = 0
 
 		const now = moment()
-		const expirationDate = now.add(termBody, 'days').format('YYYY-MM-DD')
+		const expirationDate = now.add(termBody, 'days').format('DD/MMM/YYYY')
 
 		policyArray.forEach((policy) => {
 			const value = policy.split(',')
@@ -63,7 +63,7 @@ router.post('/simulate', (req, res) => {
 		const amountTotal = amountBody + interestValue - 0
 
 		res.json({
-			success: true,
+			success: 'COD_OK',
 			data: {
 				annualInterest,
 				expirationDate,
@@ -74,9 +74,9 @@ router.post('/simulate', (req, res) => {
 		})
 	} else {
 		res.json({
-			success: false,
+			success: 'COD_ERR',
 			data: {},
-			message: 'Ingrese un monto'
+			message: 'Ha ocurrido un error, por favor inténtalo de nuevo más tarde.'
 		})
 	}
 })
@@ -87,7 +87,7 @@ router.post('/getContract', async (req, res) => {
 	const base64File = await getFile({ path: filePath })
 
 	res.json({
-		success: true,
+		success: 'COD_OK',
 		data: {
 			contract: base64File
 		},
@@ -98,19 +98,20 @@ router.post('/getContract', async (req, res) => {
 router.post('/addPolicy', async (req, res) => {
 
 	const { otp } = req.body
-	if (otp === '151617') {
-		res.json({
-			success: true,
+
+	if (!otp) {
+		return res.json({
+			success: 'COD_ERR',
 			data: {},
-			message: ''
-		})
-	} else {
-		res.json({
-			success: false,
-			data: {},
-			message: 'Código OTP incorrecto'
+			message: 'Código OTP no existe'
 		})
 	}
+
+	res.json({
+		success: 'COD_OK',
+		data: {},
+		message: ''
+	})
 })
 
 

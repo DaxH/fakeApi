@@ -60,28 +60,26 @@ router.post('/getInitialData', (req, res) => {
 	})
 })
 router.post('/addCertificate', async (req, res) => {
-	
+
 	const { otp } = req.body
-
-	if (otp === '151617') {
-
-		const filePath = path.join(__dirname, '../../public/certificate/certificate/certificate.pdf');
-		const base64File = await getFile({ path: filePath })
-
-		res.json({
-			success: true,
-			data: {
-				base64File
-			},
-			message: ''
-		})
-	} else {
-		res.json({
-			success: false,
+	if (!otp) {
+		return res.json({
+			success: 'COD_ERR',
 			data: {},
-			message: 'Código OTP incorrecto'
+			message: 'Código OTP no existe'
 		})
 	}
+
+	const filePath = path.join(__dirname, '../../public/certificate/certificate/certificate.pdf');
+	const base64File = await getFile({ path: filePath })
+
+	res.json({
+		success: 'COD_OK',
+		data: {
+			base64File
+		},
+		message: ''
+	})
 })
 
 module.exports = router
