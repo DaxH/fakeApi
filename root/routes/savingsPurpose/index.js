@@ -44,6 +44,7 @@ router.post('/simulate', (req, res) => {
 	let interestMont = 0
 	let nextDateDebit = nexDebit
 
+
 	if (option === 'monthlySaving') {
 		for (let i = 0; i < term; i++) {
 
@@ -73,7 +74,8 @@ router.post('/simulate', (req, res) => {
 				detailPayment,
 				dateDebit: dateDebit.format('YYYY-MM-DD'),
 				totalSaving: totalSaving.toFixed(2),
-				totalInterest: totalInterest.toFixed(2)
+				totalInterest: totalInterest.toFixed(2),
+				expirationDate: detailPayment[detailPayment.length - 1].nextDateDebit
 			},
 			message: ''
 		})
@@ -110,7 +112,9 @@ router.post('/simulate', (req, res) => {
 			detailPayment,
 			dateDebit: dateDebit.format('YYYY-MM-DD'),
 			totalSaving: totalSaving.toFixed(2),
-			totalInterest: totalInterest.toFixed(2)
+			totalInterest: totalInterest.toFixed(2),
+			amountDebit: amountMont.toFixed(2),
+			expirationDate: detailPayment[detailPayment.length - 1].nextDateDebit
 		},
 		message: ''
 	})
