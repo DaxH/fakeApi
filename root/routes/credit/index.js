@@ -6,16 +6,71 @@ const getFile = require('../../utils/functions')
 const quotas = [
 	{
 		id: 1,
-		description: 'CUOTA FIJA'
+		description: 'TABLA AMORTIZACIÓN FRANCESA'
 	},
 	{
 		id: 2,
-		description: 'CUOTA VARIABLE'
+		description: 'TABLA AMORTIZACIÓN ALEMANA'
 	}
 ]
 
 
-
+/**
+ * @swagger
+ * /api/credit/getInitialData:
+ *   post:
+ *     summary: Obtener parámetros
+ *     tags: [Crédito]
+ *     responses:
+ *       200:
+ *         description: Respuesta exitosa
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                    type: string
+ *                    example: "COD_OK"
+ *                 data:
+ *                    type: object
+ *                    properties:
+ *                      amount:
+ *                        type: object
+ *                        properties:
+ *                          minAmount:
+ *                            type: number
+ *                            example: 2000
+ *                          maxAmount:
+ *                            type: number
+ *                            example: 100000
+ *                          minMonths:
+ *                            type: number
+ *                            example: 12
+ *                          maxMonths:
+ *                            type: number
+ *                            example: 84
+ *                          minDayDebit:
+ *                            type: number
+ *                            example: 1
+ *                          maxDayDebit:
+ *                            type: number
+ *                            example: 25
+ *                      quotas:
+ *                        type: array
+ *                        items:
+ *                          type: object
+ *                          properties:
+ *                            id:
+ *                             type: number
+ *                             example: 1
+ *                            description:
+ *                             type: string
+ *                             example: "TABLA AMORTIZACIÓN FRANCESA"
+ *                 message:
+ *                   type: string
+ *                   example: ""
+*/
 router.post('/getInitialData', (req, res) => {
 
 	res.json({
@@ -35,6 +90,78 @@ router.post('/getInitialData', (req, res) => {
 	})
 })
 
+/**
+ * @swagger
+ * /api/credit/simulate:
+ *   post:
+ *     summary: Simular crédito
+ *     tags: [Crédito]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               quota:
+ *                 type: string
+ *                 example: "TABLA AMORTIZACIÓN FRANCESA"
+ *               amount:
+ *                 type: number
+ *                 example: 2000
+ *               term:
+ *                 type: number
+ *                 example: 12
+ *     responses:
+ *       200:
+ *         description: Respuesta exitosa
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                    type: string
+ *                    example: "COD_OK"
+ *                 data:
+ *                    type: object
+ *                    properties:
+ *                      tea:
+ *                        type: number
+ *                        example: 14.5
+ *                      totalInsurance:
+ *                        type: string
+ *                        example: "3.43"
+ *                      insurance:
+ *                        type: number
+ *                        example: 0.31
+ *                      amortization:
+ *                        type: array
+ *                        items:
+ *                          type: object
+ *                          properties:
+ *                            period:
+ *                             type: number
+ *                             example: 1
+ *                            interest:
+ *                              type: string
+ *                              example: "23.58"
+ *                            capital:
+ *                              type: string
+ *                              example: "156.13"
+ *                            balance:
+ *                              type: string
+ *                              example: "1843.87"
+ *                            insurance:
+ *                              type: string
+ *                              example: "0.52"
+ *                            quotaTotal:
+ *                              type: string
+ *                              quotaTotal: "180.23"
+ *                 message:
+ *                   type: string
+ *                   example: ""
+ */
 router.post('/simulate', (req, res) => {
 
 	const { quota, amount: amountBody, term: termBody } = req.body
@@ -53,7 +180,7 @@ router.post('/simulate', (req, res) => {
 	let totalCredit = 0
 	let totalInsurance = 0
 
-	if (quota === 'CUOTA FIJA') {
+	if (quota === 'TABLA AMORTIZACIÓN FRANCESA') {
 
 		const monthlyPayment = amount * TEM / (1 - Math.pow(1 / (1 + TEM), term));
 		let balance = amount

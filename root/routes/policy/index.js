@@ -23,6 +23,53 @@ const interestPayments = [
 	}
 ]
 
+/**
+ * @swagger
+ * /api/policy/getInitialData:
+ *   post:
+ *     summary: Obtener parámetros
+ *     tags: [Póliza]
+ *     responses:
+ *       200:
+ *         description: Respuesta exitosa
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                    type: string
+ *                    example: "COD_OK"
+ *                 data:
+ *                    type: object
+ *                    properties:
+ *                      amount:
+ *                        type: object
+ *                        properties:
+ *                          minAmount:
+ *                            type: number
+ *                            example: 200
+ *                          maxAmount:
+ *                            type: number
+ *                            example: 50000
+ *                          minDays:
+ *                            type: number
+ *                            example: 31
+ *                          maxDays:
+ *                            type: number
+ *                            example: 400
+ *                      interestPayments:
+ *                        type: array
+ *                        items:
+ *                          type: object
+ *                          properties:
+ *                            id:
+ *                              type: string
+ *                              example: "AL VENCIMIENTO"
+ *                 message:
+ *                   type: string
+ *                   example: ""
+*/
 router.post('/getInitialData', (req, res) => {
 
 	res.json({
@@ -34,13 +81,65 @@ router.post('/getInitialData', (req, res) => {
 				minDays: 31,
 				maxDays: 400
 			},
-			retention: 2,
+			// retention: 2,
 			interestPayments
 		},
 		message: ''
 	})
 })
 
+/**
+ * @swagger
+ * /api/policy/simulate:
+ *   post:
+ *     summary: Simular póliza
+ *     tags: [Póliza]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               payment:
+ *                 type: string
+ *                 example: "AL VENCIMIENTO"
+ *               amount:
+ *                 type: number
+ *                 example: 200
+ *               term:
+ *                 type: number
+ *                 example: 31
+ *     responses:
+ *       200:
+ *         description: Respuesta exitosa
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                    type: string
+ *                    example: "COD_OK"
+ *                 data:
+ *                    type: object
+ *                    properties:
+ *                      annualInterest:
+ *                        type: string
+ *                        example: "4.92"
+ *                      expirationDate:
+ *                        type: string
+ *                        example: "16/Mar/2025"
+ *                      interestValue:
+ *                        type: string
+ *                        example: "0.84"
+ *                      amountTotal:
+ *                        type: string
+ *                        example: "200.84"
+ *                 message:
+ *                   type: string
+ *                   example: ""
+ */
 router.post('/simulate', (req, res) => {
 	const { amount, term } = req.body
 	if (amount && term) {
