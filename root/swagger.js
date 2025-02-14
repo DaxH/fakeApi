@@ -11,10 +11,10 @@ const swaggerDefinition = {
 		},
 		servers: [
 			{
-				url: "http://localhost:5010",
+				url: "http://20.84.48.225:5010"
 			},
 			{
-				url: "http://20.84.48.225:5010",
+				url: "http://localhost:5010"
 			}
 		]
 	},
