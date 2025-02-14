@@ -9,9 +9,14 @@ const swaggerDefinition = {
 			version: "1.0.0",
 			description: "Simuladores API",
 		},
-		servers: [{
-			url: "http://20.115.89.86:5010",
-		}],
+		servers: [
+			{
+				url: "http://localhost:5010",
+			},
+			{
+				url: "http://20.84.48.225:5010",
+			}
+		]
 	},
 	apis: [`${path.join(__dirname, "./routes/*/*.js")}`], // Path to the API routes in your Node.js application
 };
